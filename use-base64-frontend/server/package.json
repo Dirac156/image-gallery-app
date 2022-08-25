@@ -38,13 +38,16 @@
     "eslint": "^8.22.0",
     "mocha": "^10.0.0",
     "node-ts": "^5.1.2",
+    "ts-node": "^10.9.1",
     "tsx": "^3.8.2",
     "typescript": "^4.7.4"
   },
   "dependencies": {
     "aws-sdk": "^2.1201.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "helmet": "^5.1.1"
+    "helmet": "^5.1.1",
+    "validate-image-type": "^2.0.0"
   }
 }

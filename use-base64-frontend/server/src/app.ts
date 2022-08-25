@@ -9,7 +9,7 @@ const app: Application = express();
 app.use(helmet());
 app.use(cors());
 // transform all body request to json format
-app.use(express.json());
+app.use(express.json({ limit: 40000000 }));
 app.use(express.urlencoded({ extended: true }));
 app.use(api);
 
