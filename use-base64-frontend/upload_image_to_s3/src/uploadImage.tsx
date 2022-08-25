@@ -1,5 +1,5 @@
 import React, { ChangeEvent, ChangeEventHandler } from 'react';
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 
 const UploadImages: Function = (): JSX.Element => {
     const onSelectFile: ChangeEventHandler<HTMLInputElement> = async (event: ChangeEvent): Promise<any> => {
@@ -10,7 +10,8 @@ const UploadImages: Function = (): JSX.Element => {
         const s3URL = await axios.post('http://localhost:3001/upload',
                 { 
                     image: convertedFile,
-                    imageName: files[0].name
+                    imageName: files[0].name,
+                    imageType: files[0].type
                 }
         );
 
